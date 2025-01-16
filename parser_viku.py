@@ -47,7 +47,7 @@ def save_img(img_url, name_img):
 
 def main():
     try:
-        name_animal = "Бурый медведь"
+        name_animal = "Белый медведь"
         folder = "img"
         folder_file = "JSON"
         os.makedirs(folder, exist_ok=True)
