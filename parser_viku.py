@@ -19,8 +19,8 @@ def info_animal(soup, folder, url_animal):
         .text
     )
     # get img
-    img = soup.find('table').find("img", class_="mw-file-element")['src']
-    img = f'https:{img}'
+    img = soup.find("table").find("img", class_="mw-file-element")["src"]
+    img = f"https:{img}"
     # get name
     name_animal = soup.find("span", class_="mw-page-title-main").text
     path_file = f"{folder}/{name_animal}.jpg"
@@ -47,9 +47,12 @@ def save_img(img_url, name_img):
 
 def main():
     try:
-        name_animal = "Белый медведь"
-        folder = "img"
-        folder_file = "JSON"
+        name_animal = "Бурый медведь"
+        folder_static = 'static'
+        folder = f"{folder_static}/viku_img_animals"
+        folder_file = f"{folder_static}/viku_data_animals"
+
+        os.makedirs(folder_static, exist_ok=True)
         os.makedirs(folder, exist_ok=True)
         os.makedirs(folder_file, exist_ok=True)
 
@@ -60,6 +63,7 @@ def main():
 
         soup = BeautifulSoup(response.text, "lxml")
         date_animal = info_animal(soup, folder, url_animal)
+        
         save_json_file(date_animal, date_animal["name_animal"], folder_file)
         save_img(date_animal["img_src"], date_animal["path_file"])
 

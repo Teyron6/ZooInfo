@@ -2,6 +2,6 @@
   "name_animal": "Бурый медведь",
   "img_src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Medved_mzoo.jpg/275px-Medved_mzoo.jpg",
   "brief_info": "Бу́рый медве́дь, или обыкнове́нный медве́дь[1] (лат. Ursus arctos), — млекопитающее семейства медвежьих; один из самых крупных наземных хищников и один из самых распространённых представителей семейства медвежьих.\n",
-  "path_file": "img/Бурый медведь.jpg",
+  "path_file": "static/viku_img_animals/Бурый медведь.jpg",
   "url_site": "https://ru.wikipedia.org/wiki/бурый медведь"
 }

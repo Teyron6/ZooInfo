@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from textblob import TextBlob
 import requests
 import time
 import json
@@ -19,13 +20,15 @@ def get_facts(soup):
             continue
 
     del facts[101:110]
+    del facts[75]
     return facts
 
 
 def main():
     try:
         link = "https://stihi.ru/2018/11/06/1783"
-        folder = "facts"
+        folder_static = 'static'
+        folder = f"{folder_static}/facts_animals"
         os.makedirs(folder, exist_ok=True)
         response = requests.get(link)
         response.raise_for_status()
