@@ -74,11 +74,16 @@ body {
     text-decoration: none;
   }
 
-.mb-3{
+.mb-3 {
+  opacity: 0;
+}
+
+.mb-3.active{
   margin-top: 30px;
   background-color: #1b1b1d;
   border: solid 1px #46494c;
   color: #cec9c9;
+  opacity: 1;
 }
 
 a.url_site_animal{
