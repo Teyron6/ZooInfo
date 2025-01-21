@@ -80,9 +80,10 @@ body {
   border: solid 1px #46494c;
   color: #cec9c9;
 }
-a {
+a.url_site_animal{
   color: #cec9c9;
+  margin: 0;
 }
-a:hover{
+a.url_site_animal:hover{
   color: #e8eaed;
 }
