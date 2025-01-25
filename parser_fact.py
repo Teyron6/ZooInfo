@@ -27,7 +27,7 @@ def get_facts(soup):
 def main():
     try:
         link = "https://stihi.ru/2018/11/06/1783"
-        folder_static = 'static'
+        folder_static = "static"
         folder = f"{folder_static}/facts_animals"
         os.makedirs(folder, exist_ok=True)
         response = requests.get(link)
