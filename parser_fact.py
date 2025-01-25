@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from textblob import TextBlob
 import requests
 import time
 import json
