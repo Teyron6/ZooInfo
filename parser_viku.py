@@ -48,7 +48,7 @@ def save_img(img_url, name_img):
 def main():
     try:
         name_animal = "Бурый медведь"
-        folder_static = 'static'
+        folder_static = "static"
         folder = f"{folder_static}/viku_img_animals"
         folder_file = f"{folder_static}/viku_data_animals"
 
@@ -63,7 +63,7 @@ def main():
 
         soup = BeautifulSoup(response.text, "lxml")
         date_animal = info_animal(soup, folder, url_animal)
-        
+
         save_json_file(date_animal, date_animal["name_animal"], folder_file)
         save_img(date_animal["img_src"], date_animal["path_file"])
 
